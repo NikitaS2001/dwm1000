@@ -1,0 +1,10 @@
+<launch>
+	<arg name="stm_device" default="/dev/ttyAMA0" />
+	<arg name="stm_baud" default="57600"/>
+
+	<node pkg="dwm1000" type="serial_stm32.py" name="serial_stm_node">
+		<param name="port" value="$(arg stm_device)" />
+        	<param name="baud" value="$(arg stm_baud)" />
+	
+	</node>
+</launch>
